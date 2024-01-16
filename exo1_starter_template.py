@@ -7,7 +7,6 @@ class Robot():
     """
 
     def __init__(self, name='', power=False):
-        self.__name = "<unnamed>"
         self.__power = False
         self.__current_speed = 0
         self.__battery_level = 0
@@ -36,6 +35,9 @@ class Robot():
     @property
     def get_vitesse(self):
         return self.__current_speed
+    @property
+    def name(self):
+        return self.__name
 
     def get_etat(self):
         print("Nom robot : {}".format(self.__name))
